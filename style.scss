@@ -1,0 +1,49 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: arial;
+    border-radius: 15px;
+}
+body {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+}
+main{display:flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.pageHeading {
+    margin-top:30px;
+  text-align: center;
+}
+
+.inputLayout {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap:10px;
+}
+
+.inputLabels {
+    padding-top: 10px;
+  text-align: right;
+}
+
+textarea{
+    resize: vertical;
+    padding:10px;
+    font-size:16px;
+    border-bottom-right-radius: 0px;
+}
+
+
+.encode_button{
+width: 300px;
+padding:10px;
+justify-content:  center;
+margin: auto;
+margin-top:10px;
+}
