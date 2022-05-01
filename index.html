@@ -14,9 +14,14 @@
     <h1 class="pageHeading">Morse Code Generator</h1>
     <div class="inputLayout">
         <label class="inputLabels" for="input">Text or Morse:</label>
-        <textarea name="input" id="input" cols="85" rows="5"></textarea>
-        <label class="inputLabels"for="output">Translation</label>
-        <textarea name="output" id="output" cols="85" rows="10" disabled></textarea>
+        <div class="wrapper">
+            <textarea class="textbox" name="input" id="input" cols="85" rows="5"
+                placeholder="Alphanumeric characters only a-z A-Z 0-9. All special characters will be stripped!"></textarea>
+        </div>
+        <label class="inputLabels" for="output">Translation</label>
+        <div class="wrapper">
+            <textarea class="textbox" name="output" id="output" cols="85" rows="10" disabled></textarea>
+        </div>
     </div>
     <button id="encodeButton" class="encode_button">Translate</button>
 </main>
