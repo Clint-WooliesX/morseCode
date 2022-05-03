@@ -15,7 +15,7 @@ main {
   border:4px solid rgb(46, 46, 46);
   margin-top:20px;
   padding:10px;
-  background-color: rgb(247, 250, 205);
+  background-color: blanchedalmond;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -26,6 +26,10 @@ main {
   margin-top: 30px;
   margin-bottom: 30px;
   text-align: center;
+}
+
+#morse{
+  width: 64px;
 }
 
 .inputLayout {
@@ -44,11 +48,12 @@ textarea {
   box-shadow: inset 1px 1px 3px black;
   resize: vertical;
   padding: 10px;
-  font-size: 16px;
+  font-size: 22px;
+  font-stretch: expanded;
 }
 
-.encode_button {
-  width: 300px;
+.encode_button{
+  width: fit-content;
   padding: 10px;
   font-size: 16px;
   font-weight:bold;
@@ -81,3 +86,11 @@ textarea {
   z-index: 4;
   pointer-events: none;
 }
+
+.buttonImgTxt{
+
+// display:flex;
+// flex-direction: column;
+// justify-self: center;
+}
+

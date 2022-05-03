@@ -1,8 +1,10 @@
+//Button eventListener
 const userInput = document.getElementById('input');
 const morseOutput = document.getElementById('output');
 const encodeButton = document.getElementById('encodeButton');
 encodeButton.addEventListener('click', function () { textOrMorse(userInput.value); });
 
+//Morse code object used for conversion of text to morse and back
 const morse = {
     A: ".-",
     B: "-...",
@@ -42,10 +44,11 @@ const morse = {
     _9: "----.",
     _0: "-----",
 };
-
+// array of keys and values for decoding
 valueKeys = Object.values(morse);
 keyValues = Object.keys(morse);
 
+// convert text to morse
 const textOrMorse = (message) => {
     if (message.match(/[a-zA-Z0-9]/)) return msg2morse(message);
     return morse2msg(message);
@@ -66,7 +69,9 @@ const encode = (message) => {
     }
     return output(morseCode.join(" "));
 };
+//-------------------End encode----------------------------//
 
+// Convert morse to text
 const morse2msg = (morse) => {
     const msgArray = morse.split(" ");
     return decode(msgArray);
@@ -74,6 +79,8 @@ const morse2msg = (morse) => {
 
 const decode = (message) => {
     const text = message.map(code => valueKeys.indexOf(code));
+    //Handling of numbers reason: keys cannot start with a number
+    //note to self: Probably can call a function to iterate over numbers
     const decodedMessage = text.map(char => keyValues[char] == "_" ? " "
         : keyValues[char] == "_1" ? "1"
         : keyValues[char] == "_2" ? "2"
@@ -89,9 +96,10 @@ const decode = (message) => {
 
     return output(decodedMessage);
 };
+//-------------------End decode----------------------------//
 
+
+// update DOM with encoded//decoded message
 const output = (encodedMessage) => {
     morseOutput.value = encodedMessage;
 };
-
-
